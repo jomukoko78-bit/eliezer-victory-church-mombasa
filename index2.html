@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Search Engine Description (Shows up on Google search results) -->
+<meta name="description" content="Welcome to Eliezer Victory Church Mombasa, located at Mkomani Showgrounds in Nyali. Join Pastor Amos Mugo Kamau for vibrant Sunday worship, youth fellowship, and a welcoming community where everyone is somebody!">
+
+<!-- Search Keywords -->
+<meta name="keywords" content="Eliezer Victory Church, Church in Mombasa, Churches in Nyali, Mkomani Showgrounds church, Pastor Amos Mugo, Mombasa worship, Christian church Kenya">
+
+    <title>Eliezer Victory Church Mombasa</title>
+    <style>
+        /* --- Reset & Base Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #fcfcfc;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* --- Color Palette Variables --- */
+        :root {
+            --primary-blue: #0f2c59; /* Deep Coastal Blue */
+            --gold: #d4af37;         /* Warm Gold Accent */
+            --dark-gray: #2b2b2b;
+            --light-bg: #f4f6f9;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background-color: var(--primary-blue);
+            padding: 15px 5%; /* Adjusted padding for logo */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .logo-img {
+            height: 60px; /* Standard logo height for header */
+            width: auto;
+            margin-right: 15px;
+            /* If the logo has a light background, this helps it blend: */
+            border-radius: 50%; 
+            border: 2px solid #ffffff; 
+        }
+        .logo-text {
+            color: #ffffff;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+        .logo-text span {
+            color: var(--gold);
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--gold);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(15, 44, 89, 0.85), rgba(15, 44, 89, 0.95)), 
+                        url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 100px 20px 120px 20px; /* Adjust padding for visual flow */
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-logo {
+            width: 150px; /* Larger emblem for impact */
+            margin-bottom: 25px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .hero .motto {
+            font-size: 1.5rem;
+            color: var(--gold);
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        .scripture-box {
+            border-left: 4px solid var(--gold);
+            padding-left: 20px;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            text-align: left;
+        }
+        .scripture-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        .scripture-ref {
+            font-weight: bold;
+            color: var(--gold);
+            margin-top: 5px;
+            display: block;
+        }
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--primary-blue);
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #f1c40f;
+            transform: translateY(-2px);
+        }
+
+        /* --- Content Sections --- */
+        section {
+            padding: 80px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold);
+            margin: 10px auto 0 auto;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .about-text h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .pastors-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--light-bg);
+            padding: 30px;
+            border-radius: 8px;
+            border-top: 5px solid var(--primary-blue);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--light-bg);
+            max-width: 100%;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .service-card {
+            background-color: #ffffff;
+            padding: 35px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+        .service-time {
+            font-size: 1.2rem;
+            color: var(--gold);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .info-item {
+            margin-bottom: 25px;
+        }
+        .info-item h4 {
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary-blue);
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 4px solid var(--gold);
+        }
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+        .footer-logo {
+            height: 40px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        /* --- Responsive Tweaks --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero .motto { font-size: 1.2rem; }
+            .hero-logo { width: 100px; }
+            nav ul { display: none; } /* Simplicity for mobile */
+            .logo-text { font-size: 1.1rem; }
+            .logo-img { height: 50px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#home" class="logo-container">
+                <!-- Add the logo in the header -->
+                <img src="1000112368.jpg" alt="EVC Logo" class="logo-img">
+                <div class="logo-text">ELIEZER <span>VICTORY</span><br><span style="font-size: 0.9rem; color: #fff;">MOMBASA</span></div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+        <div class="hero-content">
+            <!-- Large Logo Emblem in the Hero -->
+            <img src="1000112368.jpg" alt="Eliezer Victory Church Emblem" class="hero-logo">
+            <h1>Eliezer Victory Church</h1>
+            <p class="motto">"Where Everyone is Somebody!"</p>
+            
+            <div class="scripture-box">
+                <p class="scripture-text">"Now to him who is able to do immeasurably more than all we ask or imagine, according to his power that is at work within us..."</p>
+                <span class="scripture-ref">Ephesians 3:20</span>
+            </div>
+            
+            <a href="#services" class="btn-primary">Join Our Service</a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">Who We Are</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>Our Vision & Mission</h3>
+                <p>We are a vibrant, Christ-centered church community in Mombasa, Kenya. We are dedicated to sharing, supporting, and growing in faith together. Our mission is to proclaim the Gospel, inspiring repentance, renewal, and a powerful spiritual legacy through worship, deep teaching, and community outreach.</p>
+                <br>
+                <p>Whether you are visiting Mombasa or searching for a spiritual home, our doors and our hearts are wide open to welcome you.</p>
+            </div>
+            <div class="pastors-card">
+                <h3>Our Leadership</h3>
+                <p style="margin-top: 10px; font-style: italic;">Guided and cared for under the pastoral leadership of:</p>
+                <h4 style="color: var(--primary-blue); font-size: 1.3rem; margin: 15px 0 5px 0;">Pastor Mr. & Mrs. Amos Mugo Kamau</h4>
+                <p>Dedicated to leading a flock built on stubborn, unshakeable faith and kingdom values.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="section-title">Our Weekly Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Main Sunday Service</h3>
+                <p class="service-time">10:00 AM - 2:00 PM</p>
+                <p>Join us for a powerful session of worship, the "Inspired Souls" dance ministry, and an encouraging, transformational sermon.</p>
+            </div>
+            <div class="service-card">
+                <h3>Mid-Week Fellowship</h3>
+                <p class="service-time">Tuesday 5:30 PM</p>
+                <p>A mid-week spiritual recharge involving interactive Bible study, prayers, and personal testimony sharing.</p>
+            </div>
+            <div class="service-card">
+                <h3>Youth, Praise, Worship & Dance Ministry</h3>
+                <p class="service-time">Saturdays 4:00 PM</p>
+                <p>Empowering the next generation through creative arts, dance ministry rehearsals, and fellowship.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact">
+        <h2 class="section-title">Find Us</h2>
+        <div class="contact-container">
+            <div>
+                <h3>Location & Details</h3>
+                <p style="margin-bottom: 20px;">Feel free to worship with us at our physical location or reach out via our online channels.</p>
+                
+                <div class="info-item">
+                    <h4>Physical Location</h4>
+                    <p>Mkomani Showgrounds, Nyali, Mombasa, Kenya</p>
+                </div>
+                
+                <div class="info-item">
+                    <h4>YouTube Channel</h4>
+                    <p>Eliezer Victory Church - Mombasa</p>
+                </div>
+            </div>
+            
+            <!-- A placeholder for where you can embed a Google Map later -->
+            <div style="background-color: #eaeaea; border-radius: 8px; display: flex; align-items: center; justify-content: center; min-height: 250px; border: 2px dashed #ccc;">
+                <p style="color: #666; text-align: center; padding: 20px;">
+                    <strong>[Google Map Location Area]</strong><br>
+                    You can easily embed a live map here later!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <img src="1000112368.jpg" alt="EVC Footer Logo" class="footer-logo">
+        <p>&copy; 2026 Eliezer Victory Church Mombasa. All Rights Reserved. | "A Place Where Everyone Is Somebody!"</p>
+    </footer>
+
+</body>
+</html>
